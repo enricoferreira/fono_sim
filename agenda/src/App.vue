@@ -1,18 +1,26 @@
 <template>
   <v-app>
+    <TheAppBar/>
     <v-main>
       <router-view/>
     </v-main>
   </v-app>
 </template>
 
-<script>
+<script setup>
+import TheAppBar from './components/TheAppBar.vue'
+import { ref, onMounted } from 'vue'
 
-export default {
-  name: 'App',
+// reactive state
+const count = ref(0)
 
-  data: () => ({
-    //
-  }),
+// functions that mutate state and trigger updates
+function increment() {
+  count.value++
 }
+
+// lifecycle hooks
+onMounted(() => {
+  console.log(`The initial count is ${count.value}.`)
+})
 </script>
