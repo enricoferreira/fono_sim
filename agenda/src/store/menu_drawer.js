@@ -1,11 +1,13 @@
 import { defineStore } from "pinia";
-import { computed } from "vue";
+import { ref } from "vue";
 
 export const useDrawerStore = defineStore('drawer', () => {
-    const first_name_user = ref('Giulia');
-    const last_name_user = ref('Ferreira');
-    const type_user = ref('super')
-    const name_user = computed(() => `${first_name_user.value} ${last_name_user.value}`)
+    
+    const drawer = ref(false);
 
-    return {name_user, type_user}
+    function toggle() {
+        drawer.value = !drawer.value;
+    }
+
+    return {drawer, toggle}
 })

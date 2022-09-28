@@ -1,6 +1,7 @@
 <template>
   <v-app>
     <TheAppBar/>
+    <TheNavDrawer/>
     <v-main>
       <router-view/>
     </v-main>
@@ -9,6 +10,8 @@
 
 <script setup>
 import TheAppBar from './components/TheAppBar.vue'
+import TheNavDrawer from './components/TheDrawerNavigation.vue'
+
 import { ref, onMounted } from 'vue'
 
 // reactive state

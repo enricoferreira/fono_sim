@@ -1,14 +1,15 @@
 <template>
     <div>
-        Home
+        Home {{drawer}}
         <v-btn :to="{name: 'About'}" color="success">text</v-btn>
     </div>
 </template>
 
-<script>
-export default {
-
-}
+<script setup>
+import { storeToRefs } from 'pinia'
+import {useDrawerStore} from '../store/menu_drawer'
+const store = useDrawerStore()
+const {drawer} = storeToRefs(store)
 </script>
 
 <style>

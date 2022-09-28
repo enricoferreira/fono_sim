@@ -11,10 +11,12 @@
     </v-navigation-drawer>
 </template>
 
-<script>
-export default {
-
-}
+<script setup>
+import { storeToRefs } from 'pinia';
+import {ref} from 'vue'
+    import { useDrawerStore } from '../store/menu_drawer.js'
+    const store = useDrawerStore();
+    const {drawer} = storeToRefs(store)
 </script>
 
 <style>
