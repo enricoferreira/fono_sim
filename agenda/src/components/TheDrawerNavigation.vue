@@ -8,10 +8,10 @@
         <v-list density="compact" nav>
             <v-list-item :to="{name: 'Home'}" prepend-icon="mdi-home-outline" title="Início" value="home"></v-list-item>
             <v-list-item :to="{name: 'Agenda'}" prepend-icon="mdi-calendar-outline" title="Agenda" value="agenda"></v-list-item>
-            <v-list-item prepend-icon="mdi-finance" title="Evolução" value="evolucao"></v-list-item>
-            <v-list-item prepend-icon="mdi-handshake-outline" title="Atendimentos" value="atendimentos"></v-list-item>
-            <v-list-item prepend-icon="mdi-account-group-outline" title="Pacientes" value="pacientes"></v-list-item>
-            <v-list-item :to="{name: 'RelatoriosGeralRoute'}" prepend-icon="mdi-account-group-outline" title="Relatórios" value="relatorios"></v-list-item>
+            <v-list-item :to="{name: 'EvolucaoRoute'}" prepend-icon="mdi-finance" title="Evolução" value="evolucao"></v-list-item>
+            <v-list-item :to="{name: 'Atendimentos'}" prepend-icon="mdi-handshake-outline" title="Atendimentos" value="atendimentos"></v-list-item>
+            <v-list-item :to="{name: 'Pacientes'}" prepend-icon="mdi-account-group-outline" title="Pacientes" value="pacientes"></v-list-item>
+            <v-list-item :to="{name: 'RelatoriosGeralRoute'}" prepend-icon="mdi-note-text-outline" title="Relatórios" value="relatorios"></v-list-item>
         </v-list>
 
     </v-navigation-drawer>

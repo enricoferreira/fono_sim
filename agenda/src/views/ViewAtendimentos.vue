@@ -1,5 +1,5 @@
 <template>
-  <v-container>Evolução</v-container>
+  <v-container>Atendimentos</v-container>
 </template>
 
 <script setup>
@@ -12,7 +12,7 @@ const store_main = useMainStore()
 const {changeTitlePage} = storeToRefs(store_main)
 
 onMounted(() => {
-  store_main.changeTitlePage('Evolução')
+  store_main.changeTitlePage('Atendimentos')
 })
 
 </script>
