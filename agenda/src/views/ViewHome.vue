@@ -1,6 +1,7 @@
 <template>
   <div>
     <ProximosAtendimentos/>
+    <AtendimentosAtuais/>
   </div>
 </template>
 
@@ -8,6 +9,7 @@
 import { storeToRefs } from 'pinia';
 import {useMainStore} from '../store/main'
 import ProximosAtendimentos from '../components/home/ProximosAtendimentos.vue'
+import AtendimentosAtuais from '../components/home/AtendimentosAtuais.vue'
 import {onMounted} from 'vue'
 
 const store_main = useMainStore();

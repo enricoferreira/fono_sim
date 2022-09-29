@@ -1,7 +1,7 @@
 <template>
     <v-container>
         <v-sheet class="mx-auto" elevation="0">
-            <h4 class="text-h5 mb-2">Meus próximos atendimentos</h4>
+            <h4 class="text-h5 mb-2">Atendimentos geral</h4>
             <div class="overflow-auto py-2">
                 <v-card variant="tonal" min-width="220" v-for="(item, index_item) in prox_atendimentos" :key="index_item + 'prox_aten'" class="mr-4">
                     <v-card-title class="py-2 d-flex">
