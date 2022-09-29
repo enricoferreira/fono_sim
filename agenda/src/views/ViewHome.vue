@@ -1,12 +1,13 @@
 <template>
-    <v-container>
-        Aqui é a home page
-    </v-container>
+  <div>
+    <ProximosAtendimentos/>
+  </div>
 </template>
 
 <script setup>
 import { storeToRefs } from 'pinia';
 import {useMainStore} from '../store/main'
+import ProximosAtendimentos from '../components/home/ProximosAtendimentos.vue'
 import {onMounted} from 'vue'
 
 const store_main = useMainStore();

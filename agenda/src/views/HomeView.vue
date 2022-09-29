@@ -1,18 +1,7 @@
 <template>
-  <HelloWorld />
+  <ProximosAtendimentos/>
 </template>
 
 <script>
-import { defineComponent } from 'vue';
-
-// Components
-import HelloWorld from '../components/HelloWorld.vue';
-
-export default defineComponent({
-  name: 'HomeView',
-
-  components: {
-    HelloWorld,
-  },
-});
+import ProximosAtendimentos from '../components/home/ProximosAtendimentos.vue'
 </script>
