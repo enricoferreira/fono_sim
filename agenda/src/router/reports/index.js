@@ -1,6 +1,11 @@
 export const reports_routes = [
     {
-        path: '/',
+        path: '/relatorios',
+        name: 'RelatoriosGeralRoute',
+        component: () => import('../../views/ViewRelatoriosGeral.vue')
+    },
+    {
+        path: '/dashboard',
         name: 'DashboardRoute',
         component: () => import('../../views/ViewDash.vue')
     },

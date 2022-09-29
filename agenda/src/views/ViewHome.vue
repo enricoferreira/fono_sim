@@ -1,15 +1,22 @@
 <template>
-    <div>
-        Home {{drawer}}
-        <v-btn :to="{name: 'About'}" color="success">text</v-btn>
-    </div>
+    <v-container>
+        Aqui é a home page
+    </v-container>
 </template>
 
 <script setup>
-import { storeToRefs } from 'pinia'
-import {useDrawerStore} from '../store/menu_drawer'
-const store = useDrawerStore()
-const {drawer} = storeToRefs(store)
+import { storeToRefs } from 'pinia';
+import {useMainStore} from '../store/main'
+import {onMounted} from 'vue'
+
+const store_main = useMainStore();
+
+const {changeTitlePage} = storeToRefs(store_main);
+
+onMounted(() => {
+  store_main.changeTitlePage('Início')
+})
+
 </script>
 
 <style>

@@ -1,6 +1,6 @@
 import { reports_routes } from './reports'
 export const routes = [
-    { path: '/', component: () => import('../views/ViewHome.vue') },
-    { path: '/about', name: 'About', component: () => import('../views/ViewAbout.vue') },
+    { path: '/', name: 'Home', component: () => import('../views/ViewHome.vue') },
+    { path: '/agenda', name: 'Agenda', component: () => import('../views/ViewAgenda.vue') },
     ...reports_routes
   ]

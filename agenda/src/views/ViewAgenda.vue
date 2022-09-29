@@ -1,5 +1,5 @@
 <template>
-  <div>Sobre</div>
+  <v-container>Agenda</v-container>
 </template>
 
 <script>
