@@ -7,7 +7,7 @@
                     <v-card-title class="py-2 d-flex">
                         {{item.nome}}
                         <v-spacer></v-spacer>
-                        <v-icon>{{item.cancelado ? 'mdi-cancel' : 'mdi-check'}}</v-icon>
+                        <v-icon size="21" :color="item.cancelado ? 'error' : 'success'">{{item.cancelado ? 'mdi-cancel' : 'mdi-check'}}</v-icon>
                     </v-card-title>
                     <v-card-subtitle>
                         {{item.data}}
