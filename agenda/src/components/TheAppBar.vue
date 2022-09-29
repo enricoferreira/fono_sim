@@ -10,8 +10,22 @@
         </v-app-bar-title>
 
         <v-spacer></v-spacer>
+
+        <v-menu>
+            <template v-slot:activator="{ props }">
+                <v-btn v-bind="props" icon="mdi-dots-vertical" color="white"></v-btn>
+            </template>
+            <v-list>
+                
+                <v-list-item variant="plain" v-for="(item, index) in menu_items_config" :key="index" :value="index">
+                    <template v-slot:prepend>
+                        <v-icon :icon="item.icon"></v-icon>
+                    </template>
+                    <v-list-item-title>{{ item.title }}</v-list-item-title>
+                </v-list-item>
+            </v-list>
+        </v-menu>
         
-        <v-btn icon="mdi-dots-vertical" color="white"></v-btn>
     </v-app-bar>
 </template>
 
@@ -19,12 +33,36 @@
 import {storeToRefs} from 'pinia'
 import {useDrawerStore} from '../store/menu_drawer'
 import {useMainStore} from '../store/main'
+import { ref } from '@vue/reactivity';
 
 const store_drawer = useDrawerStore();
 const store_main = useMainStore();
 
 const { toggle } = storeToRefs(store_drawer);
 const { title_page } = storeToRefs(store_main);
+
+const menu_items_config = [
+    {
+        title: 'Configurações',
+        value: 'config',
+        icon: 'mdi-cog-outline'
+    },
+    {
+        title: 'Permissões',
+        value: 'permissoes',
+        icon: 'mdi-account-key-outline'
+    },
+    {
+        title: 'Sobre',
+        value: 'sobre',
+        icon: 'mdi-book-cog-outline'
+    },
+    {
+        title: 'Sair',
+        value: 'sair',
+        icon: 'mdi-exit-to-app'
+    },
+]
 
 </script>
 
