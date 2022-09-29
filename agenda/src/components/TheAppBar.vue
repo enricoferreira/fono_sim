@@ -2,8 +2,15 @@
     <v-app-bar elevation="0" color="primary">
         <v-app-bar-nav-icon @click="store_drawer.toggle"></v-app-bar-nav-icon>
         
-        <v-app-bar-title><v-img width="80"  src="http://www.fonosim.com.br/img/elements/logotipo.png"></v-img></v-app-bar-title>
         <v-spacer></v-spacer>
+
+        <v-app-bar-title class="justify-center text-center">
+            {{title_page}}
+            <!-- <v-img width="73"  src="http://www.fonosim.com.br/img/elements/logotipo.png"></v-img> -->
+        </v-app-bar-title>
+
+        <v-spacer></v-spacer>
+        
         <v-btn icon="mdi-dots-vertical" color="white"></v-btn>
     </v-app-bar>
 </template>
